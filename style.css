@@ -1,0 +1,297 @@
+/* Estilo Geral */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header e Navegação */
+header {
+    background: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    max-height: 100px; /* Controla o tamanho do logo */
+}
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+header nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+header nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+header nav a:hover {
+    color: #e67e22;
+}
+
+/* Seção 1: Hero (Banner com Imagem) */
+.hero {
+    background-image: url('images/banner.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 350px 0;
+    text-align: center;
+    position: relative;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+.hero h2 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+.cta-button {
+    background: #e67e22;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+    background: #d35400;
+}
+
+/* Seção 2: Serviços */
+.services {
+    padding: 60px 0;
+    background: #f9f9f9;
+}
+.services h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.service-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: center;
+}
+.service-card h3 {
+    color: #e67e22;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+/* Seção 3: Sobre Nós (com Imagem) */
+.about {
+    padding: 70px 0;
+    background: #fff;
+}
+.about h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+.about-content {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    gap: 40px;
+}
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+.about-text p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* --- MUDANÇA PRINCIPAL AQUI --- */
+.about-image img {
+    width: 100%; /* Ocupa 100% da largura do container */
+    height: 650px; /* Define uma ALTURA FIXA para a imagem vertical */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer (corta o excesso) */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+/* --- FIM DA MUDANÇA --- */
+
+
+/* Seção 4: Como Ajudar (Contato) */
+.contact {
+    padding: 60px 0;
+    background: #f9f9f9;
+    text-align: center;
+}
+.contact h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+.contact > .container > p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+.contact-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.contact-card h3 {
+    color: #e67e22;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+.contact-card strong {
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+.social-media {
+    margin-top: 30px;
+}
+.social-media a {
+    text-decoration: none;
+    color: #fff;
+    background: #2c3e50;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.social-media a:hover {
+    background: #e67e22;
+}
+
+/* Rodapé */
+footer {
+    background: #34495e;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+footer p {
+    margin: 5px 0;
+}
+
+
+/* --- INÍCIO DA SEÇÃO DE RESPONSIVIDADE --- */
+
+@media (max-width: 768px) {
+
+    /* Ajusta o cabeçalho para empilhar em telas pequenas */
+    header .container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .logo {
+        max-height: 50px; 
+        margin-bottom: 15px;
+    }
+
+    header nav ul {
+        text-align: center;
+    }
+
+    header nav li {
+        margin: 0 10px;
+    }
+    
+    header nav a {
+        font-size: 1em;
+    }
+
+    /* Reduz o tamanho das fontes principais */
+    .hero h2 {
+        font-size: 2.2em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    .services h2,
+    .about h2,
+    .contact h2 {
+        font-size: 2em;
+    }
+
+    /* Faz os botões sociais empilharem */
+    .social-media a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    /* Ajusta o alinhamento do texto da seção 'Sobre' */
+    .about-content {
+        text-align: center;
+    }
+    
+    /* Ajusta a altura da imagem 'Sobre' no celular */
+    .about-image img {
+        height: 350px; /* Uma altura menor para telas de celular */
+    }
+}
